@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////
-// InterProcessShare.h -- Win32 interprocess shared data
+// InterProcessShare.hpp -- Win32 interprocess shared data
 // This file is part of MZC3.  See file "ReadMe.txt" and "License.txt".
 ////////////////////////////////////////////////////////////////////////////
 
@@ -36,9 +36,8 @@ protected:
 
 ////////////////////////////////////////////////////////////////////////////
 
-#ifndef MZC_INLINE
-    #define MZC_INLINE inline
-#endif
+#undef MZC_INLINE
+#define MZC_INLINE inline
 
 template <typename T_DATA>
 MZC_INLINE MInterProcessShare<T_DATA>::MInterProcessShare() :
